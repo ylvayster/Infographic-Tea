@@ -1,0 +1,457 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway|Pacifico';
+
+/*COLOURS*/
+$background : rgba(199, 199, 199, 0.91);
+$dark : rgba(15, 18, 15, 0.98);
+$accent: rgba(154, 153, 153, 0.88);
+
+/*TEA colours*/
+$black : rgb(0,0,0);
+$green : rgb(122, 203, 122);
+$white : rgb(255,255,255);
+$rooibos : rgb(255, 150, 118);
+$matcha : rgb(148, 244, 148);
+$herbal : rgb(226, 162, 239);
+
+
+/*GENERAL*/
+body {
+    background: -webkit-linear-gradient(rgba($white,0.05),rgba($white,0.1),rgba($white,0.2),rgba($white,0.4)), url("../img/teaplantindia.jpg");
+    background: -o-linear-gradient(rgba($white,0.05),rgba($white,0.1),rgba($white,0.2),rgba($white,0.4)), url("../img/teaplantindia.jpg");
+    background: linear-gradient(rgba($white,0.05),rgba($white,0.1),rgba($white,0.2),rgba($white,0.4)), url("../img/teaplantindia.jpg");
+    background-position: top;
+    background-size: auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+/*TEXT*/
+h1, h2 {
+	text-align: center;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Pacifico', cursive;
+    color: $dark;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0.2em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0.6em 0;
+}
+
+h3 {
+    color: $dark;
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+span#chosenBrew {
+    color: $white;
+}
+
+li {
+    padding-bottom: 0.4em;
+}
+
+/*DIVS & CONTAINERS*/
+div {
+	box-sizing: border-box;
+}
+
+div#left {
+    float: left;
+    margin-top: 2em;
+    padding: 0em 1.5em 0 5em;
+    width: 50%;
+    
+    .facts {
+        background-color: $white;
+        border-radius: 0.5em;
+        border: 0.3em solid;
+        clear: both;
+        margin-bottom: 1.2em;
+        overflow: hidden;
+        width: 100%;
+        
+        h3 {
+	        float:left;
+	        width: 65%;
+        }
+        
+        &:nth-child(odd) {
+        border-color: $green;
+        background-color: rgba($white,0.8);
+        }
+        
+        &:nth-child(even) {
+        border-color: $accent;
+        background-color: rgba($white, 0.8);
+        }
+        
+        &:nth-child(odd).active, &:nth-child(even).active {
+        background-color: $white;
+        }
+    
+        div.factText {
+            max-width: 100%;
+            margin: 20px;
+            max-width: 100%;
+            max-height: 100%;
+    	    clear: both;
+	        display: none;
+        }    
+    }
+
+}
+
+div#right {
+	float: right;
+    margin-top: -3em;
+    padding: 0 5em 0 1.5em;
+    width: 50%;
+    
+    #info {
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 10px;
+        font-size:1em;
+        margin: auto;
+        margin-top: 14em; 
+        text-align: center;
+        
+        p {
+            margin: 0;
+            padding: 0.5em;
+        }
+    }
+    
+    #currentBrew {
+        background-color: $background;
+        background:
+        url("../img/teacup.png");
+        background-position: center;
+        border-radius: 20px;
+        height: 300px;
+        margin-bottom: 2em;
+        margin-top: 0.5em;
+        padding: 0 0.9em;
+        overflow: hidden;
+        width:100%;        
+    }   
+    
+    #currentBrew.gradient {
+            background: -webkit-linear-gradient(rgba($white,0.95),rgba($white,0.95)),  url("../img/teacup.png");
+            background: -o-linear-gradient(rgba($white,0.95),rgba($white,0.95)), url("../img/teacup.png");
+            background: linear-gradient(rgba($white,0.95),rgba($white,0.95)), url("../img/teacup.png");
+            background-position: center;
+                    }
+    
+    #brewFact1 {
+	    clear: both;
+    }
+    
+    .brewFact {
+        display: none;
+        float: left;
+        text-align: center;
+        width: percentage(1/3);   
+    }
+    
+    #brewFact1, #brewFact2, #brewFact3 {
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            font-size: 1.2em;
+        }
+    }
+    
+    #brewFact4 {
+        width: 100%;
+        
+        p {
+            margin: 0.2em;
+        }
+    }
+    
+    .visible {
+	    display: initial;
+    }
+
+    .teas {
+        border-radius: 100%;
+        float: left;
+        height: 82px;
+        margin: 0 auto;
+        width: 82px;
+    }
+    
+    div.teas.active {
+	    border: 2px solid $green;
+    }
+    
+    #teaSelection {
+        width: 82*6px;
+        height: 100px;
+        margin: 0 auto;
+        
+        p {
+            margin: 0;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            margin: 0.7em auto;
+            margin-bottom: 0.1em;
+        }
+        
+        #blackTea .circle {
+            background-color: $black;
+        }
+        
+         #greenTea .circle {
+            background-color: $green;
+        }
+        
+         #whiteTea .circle {
+            background-color: $white;
+         }
+        
+        #whiteTea:hover {
+            .circle{               
+                  border: 1px solid $dark;
+            }
+        }
+        
+         #rooibos .circle {
+            background-color: $rooibos;
+        }
+        
+         #matcha .circle {
+            background-color: $matcha;
+        }
+        
+         #herbalTea .circle {
+            background-color: $herbal;
+        }
+    }
+}
+
+div#sources {
+    clear: both;
+    text-align: center;
+    
+    a {
+        color: $white;
+      
+        &:visited {
+        color: $green;
+        }
+            
+        &:hover {
+            color: $black;
+        }
+    }
+}
+
+/*IMAGES*/
+img.brewIcon {
+	height: 80px;
+	width: 80px;
+}
+
+img.factIcon {
+	float: left;
+	height: 50px;
+	margin: 0.5em 0 0 0.5em;
+    width: 50px;
+}
+
+img.teaIcon {
+	height: 30px;
+	width: 30px;
+}
+
+/*SHAPES*/
+.arrow {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid $black;
+	float: right;
+    height: 0;
+    margin: 0.7em;
+    width: 0;
+	}
+
+#crossDiv {
+    border: 2px solid $black;
+    border-radius: 100%;
+    display: none;
+    float: right;    
+    height: 27px;
+    margin-top: 0.5em;
+    margin-right: -0.3em;
+    width: 27px;
+}
+
+#cross {	
+      background: $black;
+      left: 10px;
+      margin-top: 2px;
+      height: 19px;
+      position: relative;
+      -webkit-transform: rotate(45deg);  /* Chrome, Safari 3.1+ */
+      -moz-transform: rotate(45deg);  /* Firefox 3.5-15 */
+      -ms-transform: rotate(45deg);  /* IE 9 */
+      -o-transform: rotate(45deg);  /* Opera 10.50-12.00 */
+      transform: rotate(45deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+      width: 3px;
+}
+
+#cross:after {
+      background: $black;
+      content: "";
+      height: 3px;
+      left: -8px;
+      position: absolute;
+      top: 8px;
+      width: 19px;
+}
+
+/*ANIMATIONS*/
+.rotate {
+    -webkit-transform: rotate(180deg);  /* Chrome, Safari 3.1+ */
+    -moz-transform: rotate(180deg);  /* Firefox 3.5-15 */
+    -ms-transform: rotate(180deg);  /* IE 9 */
+    -o-transform: rotate(180deg);  /* Opera 10.50-12.00 */
+    transform: rotate(180deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+
+@media only screen and (max-width: 1200px){
+    h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+    }
+    
+    div#left, div#right {
+        width: 100%;
+    }
+    
+    div#left {
+        margin-top: 0em;
+        padding: 1.5em 7em;
+    }
+    
+    div#right {
+        margin-top: 0;
+        padding: 0 5em;
+                
+        h2 {
+            margin-bottom: 0.4em;
+        }
+        
+        #info{
+            width:85%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    div#left, div#right {
+        width: 100%;
+    }
+    
+    div#left, div#right {
+        float: none;
+        padding: 3% 15% 0 15%;
+    }
+    
+    div#right{
+        padding-top: 0.1em;
+        
+         #teaSelection {
+            height: 100px;
+            margin: 0 auto;
+            width: 82*4px;
+         }
+        
+        #currentBrew {
+            height: 400px;
+        }
+        
+        .teas {
+            margin-left: 8%;
+            margin-bottom: 4%;
+        }
+        
+        .circle{
+            border-radius: 100%;
+            height: 30px;
+            margin: 12% auto;
+            width: 30px;
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 540px){
+
+    h1 {
+        font-size: 3.2em;
+        margin-bottom: 0.2em;
+    }
+    
+    div#left, div#right {
+        margin: 0 auto;
+        min-width: 400px;
+    }
+    
+    div#left, div#right {
+        margin: 0 auto;
+        padding: 1em;
+    }
+    
+    div#left {
+    .facts {    
+        h3 {
+            font-size: 1.5em;
+            width: 50%;
+            }
+        }
+    }
+    
+        div#right {
+        padding-top: 1em;
+        
+        #currentBrew {
+        margin: 0 auto;
+        padding: 1em;
+        }
+    
+    }
+    
+    #crossDiv {
+        margin-top: -0.3em;
+    }
+}
+

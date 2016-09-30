@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>A beginner's guide to tea</title>
+	<link rel="stylesheet" href="./dist/normalize.css">
+	<link rel="stylesheet" href="./dist/styles.css">
+</head>
+<body>
+<h1>A beginner's guide to tea</h1>
+<div class="wrapper" id="left">
+
+	<div class="facts">
+		<img src="img/tealeaves.png" alt="Tea leaves" class="factIcon">
+		<h3>What is tea?</h3>
+		<div class="arrow"></div>
+		<div class="factText">
+		<p>“True” or “real” tea (<b>black, white, green, yellow</b> and <b>oolong tea</b>) are made out of leaves from the bush <i>Camelia Sinensis</i>, a bush native to Asia.  The difference between the tea types are how the leaves are processed; whether they are wilted or unwilted and how oxidized the leaves are.</p>
+		
+		<p><b>Matcha tea</b>  is a Japanese kind of specially grown and processed green tea, where the processed tea is ground to a fine powder.</p>   
+		<p><b>Roobios tea</b>, also commonly called red tea, are made out of leaves of the South African <i>Rooibos</i> bush.</p>
+		
+		<p><b>Herbal tea</b> is made out of infusion or decoction of herbs, spices and other plants and has no connection with "true" teas. Herbal tea is sometimes also called herbal infusion or tisane to avoid confusing it with tea made of leaves from either the <i>Camelia Sinensis</i> or <i>Rooibos</i> bush.</p>
+		</div>
+	</div>
+
+	<div class="facts">
+		<img src="img/healthbenefits.png" alt="Health benefits" class="factIcon">
+		<h3>Health benefits</h3>
+		<div class="arrow"></div>
+		<div class="factText">
+		<p>Tea – all kinds – contain a number of compounds that are good for your health. On the other hand, it is worth noting that the research about the health benefits of tea are inconclusive since the amount of compounds and their effect vary depending on brewing method, type of tea and the person that drinks it!</p>
+		
+		<p>However, true teas such as black, green and white tea all contain a high amount of <b>antioxidants</b>. Antioxidants help to get rid of toxins as well as <b>protecting your body from free oxygen radicals</b> (which cause a number of diseases such as cancer). </p>
+
+		<p>Black and green tea also have a <b>positive effect on arterial health</b>, but only if drunk without added milk!</p>
+		
+		<p>The combination of <i>theanine</i> (a stimulant similar to caffeine) and caffeine in black and green tea has been shown in some studies to promote <b>faster reaction time</b>, as well as <b>strengthen the immune system</b> and <b>increase memory and learning</b>.</p>
+		
+		<p>Rooibos tea has a lower amount of <i>tannins</i> than black and green tea, making it suitable for people sensitive to tannins, a compound which may cause an upset stomach.</p>
+		
+		<p>Herbal tea have different health benefits depending on the herbs, spices and plants it is made of. Chamomile tea, for example, is traditionally used for its potential <b>calming and anti-inflammatory effect</b>.</p>
+		</div>
+	</div>
+
+	<div class="facts">
+		<img src="img/caffeine.png" alt="Caffeine" class="factIcon">
+		<h3>Caffeine content</h3>
+		<div class="arrow"></div>
+		<div class="factText">
+			<p>	The amount of caffeine in tea varies depending on the type, brand and brewing method. </p>
+
+			<p>Typically, <b>250 ml of tea contains between 30 mg and 90 mg of caffeine</b>. That can be compared to coffee, in which a 250 ml cup of brewed coffee contains between 95 and 135 mg of caffeine and a single espresso typically contains 100 mg of caffeine.</p>
+			
+			<p>Roobios tea and herbal tea is naturally <b>caffeine free</b> but some rare exceptions can be found amongst the herbal teas.</p>
+		</div>  
+	</div>
+
+	<div class="facts">
+		<img src="img/funfacts.png" alt="Fun facts" class="factIcon">
+		<h3>Fun facts</h3>
+		<div class="arrow"></div>
+		<div class="factText">
+		<ul>
+			<li>Chinese legends state that the mythical figure Shennong invented tea in 2737 BC.</li>
+			<li>The first physical evidence of tea was found in the mausoleum of Emperor Jing of Han in Xi'an in 2016; thus proving that tea was drunk during the Han dynasty around 2100 years ago.</li>
+			<li>2/3 of the world’s population drink tea.</li>
+			<li>82% of Russians consume tea daily!</li>
+			<li>The first known shipment of tea to Europe was sent in 1607. The Dutch bought it, and made tea a fashionable drink.</li>
+			<li>80% of the tea drunk in the United States is consumed as iced tea (cold tea, often sweetened with sugar).</li>
+		</ul>
+		</div>
+	</div>
+</div>
+	
+<div class="wrapper" id="right">
+	<h2>How to brew a perfect cup of <span id="chosenBrew">tea</span>:</h2>
+	
+	<div id="teaSelection">
+		<div class="teas" id="blackTea">
+				<div class="circle"></div>
+				<p>black</p>
+		</div>
+		<div class="teas" id="greenTea">
+				<div class="circle"></div>
+				<p>green</p>
+		</div>
+		<div class="teas" id="whiteTea">
+				<div class="circle"></div>
+				<p>white</p>
+		</div>
+		<div class="teas" id="matcha">
+				<div class="circle"></div>
+				<p>matcha</p>
+		</div>
+		<div class="teas" id="rooibos">
+				<div class="circle"></div>
+				<p>rooibos</p>
+		</div>
+		<div class="teas" id="herbalTea">
+				<div class="circle"></div>
+				<p>herbal</p>	
+		</div>
+	</div>
+
+	<div id="currentBrew">
+			<div id="info">
+				<p>Choose your favorite tea above to get instructions on how to brew it perfectly!</p>
+			</div>
+			<div id="crossDiv">
+				<div id="cross"></div>
+			</div>
+			<div class="brewFact" id="brewFact1">
+			</div>
+			<div class="brewFact" id="brewFact2">
+			</div>
+			<div class="brewFact" id="brewFact3">
+			</div>
+			<div class="brewFact" id="brewFact4">
+			</div>
+	</div>
+</div>
+
+<div id ="sources">
+	<p>Fact sources: <a href="http://www.tehusetjava.se/" target="_blank">Tehuset Java (in Swedish)</a> &amp; <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a></p> 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="./dist/main.js"></script>
+</body>
+
+</html>
